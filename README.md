@@ -52,6 +52,33 @@ This project is 100% self-contained static HTML, CSS, and vanilla JS with zero b
 3. Under **Build and deployment**, select **Source: Deploy from a branch** -> branch `main` / `root`.
 4. Click **Save**. Your site will be live at `https://<your-username>.github.io/<repo-name>/`.
 
+### Option 4: Deploy to Railway / Docker
+1. Railway automatically detects `Dockerfile`!
+2. Push your code to GitHub.
+3. In [Railway.app](https://railway.app), create a **New Project** -> **Deploy from GitHub repo**.
+4. Railway will automatically build the `Dockerfile` and serve it with high-speed Nginx.
+
+---
+
+## 🐳 Docker Commands (Local)
+
+1. **Build Docker Image**:
+   ```bash
+   docker build -t nova-web:latest .
+   ```
+
+2. **Run Docker Container**:
+   ```bash
+   docker run -d -p 8080:80 --name nova_container nova-web:latest
+   ```
+   Open `http://localhost:8080` in your browser.
+
+3. **Or run with Docker Compose**:
+   ```bash
+   docker compose up -d
+   ```
+
+
 ---
 
 ## 💻 Local Testing & Preview

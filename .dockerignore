@@ -1,0 +1,10 @@
+.git
+.gitignore
+.dockerignore
+README.md
+vercel.json
+netlify.toml
+.vscode
+.idea
+*.log
+docker-compose.yml
